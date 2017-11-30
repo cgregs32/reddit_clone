@@ -1,0 +1,8 @@
+<h1>Click a topic</h1>
+<%= link_to 'Create Topic', new_sub_topic_path(@sub) %>
+
+<ul>
+  <% @topics.each do |topic| %>
+    <li><%= link_to topic.name, sub_topic_path(@sub, topic) %></li>
+  <% end %>
+</ul>

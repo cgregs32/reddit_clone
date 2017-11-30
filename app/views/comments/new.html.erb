@@ -1,0 +1,9 @@
+<h1>Add a commment</h1>
+<%= form_for [@topic, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_area :body, required: true %>
+  <br>
+  <%= f.label :author %>
+  <%= f.text_area :author, placeholder: 'Leave blank to remain anonymous' %>
+  <%= f.submit %>
+<% end %>
